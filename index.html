@@ -1,36 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>廖海天的博客 - Github.io by liaohaitian</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <title>廖海天的博客 - Github.io by liaohaitian</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="header">廖海天的博客 - Github.io</h1>
-        <p class="header">廖海天的博客</p>
+    <div id="container">
+      <div class="inner">
 
-        <ul>
-          <li class="download"><a class="buttons" href="https://github.com/liaohaitian/php/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/liaohaitian/php/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="https://github.com/liaohaitian/php">View On GitHub</a></li>
-        </ul>
+        <header>
+          <h1>廖海天的博客 - Github.io</h1>
+          <h2>廖海天的博客</h2>
+        </header>
 
-        <p class="header">This project is maintained by <a class="header name" href="https://github.com/liaohaitian">liaohaitian</a></p>
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/liaohaitian/php/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/liaohaitian/php/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/liaohaitian/php" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
 
+        <hr>
 
-      </header>
-      <section>
-        <h2>
+        <section id="main_content">
+          <h2>
 <a id="http协议" class="anchor" href="#http%E5%8D%8F%E8%AE%AE" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>HTTP协议</h2>
 
 <blockquote>
@@ -70,12 +71,15 @@ PHPSESSID再不能识别用户了。</p>
 
 <p>3.在每个链接后加上?PHPSESSID=&lt;?php echo session_id();?&gt;
     例如：<a href="./getData.php?PHPSESSID=&lt;?php%20echo%20session_id();?&gt;%22&gt;%E8%BF%9E%E6%8E%A5&lt;/a&gt;&lt;/p&gt;%0A%0A&lt;pre&gt;&lt;code&gt;%E6%88%96%E8%80%85%EF%BC%9A%20&lt;a%20href=%22./getData1.php?&lt;?php%20echo%20SID?&gt;%22&gt;%E8%BF%9E%E6%8E%A5&lt;/a&gt;%0A&lt;/code&gt;&lt;/pre&gt;%0A%0A&lt;ol&gt;%0A&lt;li&gt;&lt;p&gt;%E5%9C%A8%E6%8E%A5%E5%8F%97SESSION%E7%9A%84%E6%96%87%E4%BB%B6%0Aif(isset(%24_GET%5B'PHPSESSID'%5D))%7B%0A%20%20%20%20session_id(%24_GET%5B'PHPSESSID'%5D);%0A%7D&lt;/p&gt;%0A%0A&lt;p&gt;session_start();&lt;/p&gt;%0A%0A&lt;p&gt;echo%20%24_SESSION%5B'name'%5D;&lt;/p&gt;&lt;/li&gt;%0A&lt;/ol&gt;%0A%0A&lt;h2&gt;%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89SESSION&lt;/h2&gt;%0A%0A&lt;blockquote&gt;%0A&lt;p&gt;%E7%94%A8%E6%88%B7%E6%98%AF%E5%8F%AF%E4%BB%A5%E8%87%AA%E5%AE%9A%E4%B9%89SESSION%E7%9A%84%E4%BF%9D%E5%AD%98%E6%96%B9%E5%BC%8F%E7%9A%84%E3%80%82%20&lt;/p&gt;%0A&lt;/blockquote&gt;%0A%0A&lt;h2&gt;session%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF%E8%AF%A6%E8%A7%A3&lt;/h2&gt;%0A%0A&lt;h2&gt;%E6%94%B9%E5%8F%98SESSION%E4%BF%9D%E5%AD%98%E8%B7%AF%E5%BE%84&lt;/h2&gt;%0A%0A&lt;ul&gt;%0A&lt;li&gt;session.save_path%20=%20%22E:/phpstudy/session%22&lt;/li&gt;%0A&lt;/ul&gt;%0A%0A&lt;h2&gt;%E4%B8%80%E8%88%AC%E7%BD%91%E7%AB%99%E6%9C%8D%E5%8A%A1%E5%99%A8&lt;/h2&gt;%0A%0A&lt;p&gt;%E6%9C%80%E5%B0%91%E4%B8%A4%E5%8F%B0%E3%80%82&lt;/p&gt;%0A%0A&lt;h2&gt;SESSION%E6%95%B0%E6%8D%AE%E7%9A%84%E5%85%B1%E4%BA%AB&lt;/h2&gt;%0A%0A&lt;p&gt;%E9%97%AE%E9%A2%98%E4%BA%A7%E7%94%9F%EF%BC%9A%E5%9B%A0%E4%B8%BA%E6%9C%89%E5%A4%9A%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8&lt;/p&gt;%0A%0A&lt;h2&gt;%E5%A6%82%E4%BD%95%E5%85%B1%E4%BA%ABSESSION%E6%95%B0%E6%8D%AE%EF%BC%9A&lt;/h2&gt;%0A%0A&lt;ol&gt;%0A&lt;li&gt;%E5%B0%86SESSION%E6%95%B0%E6%8D%AE%E4%BF%9D%E5%AD%98%E5%88%B0%E6%95%B0%E6%8D%AE%E5%BA%93&lt;/li&gt;%0A&lt;li&gt;%E5%B0%86SESSION%E6%95%B0%E6%8D%AE%E4%BF%9D%E5%AD%98%E5%88%B0%E5%86%85%E5%AD%98&lt;/li&gt;%0A&lt;/ol&gt;%0A%0A&lt;h2&gt;%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9SESSION%E4%BF%9D%E5%AD%98%E6%96%B9%E5%BC%8F&lt;/h2&gt;%0A%0A&lt;blockquote&gt;%0A&lt;p&gt;%E9%BB%98%E8%AE%A4%E6%98%AF%E9%80%9A%E8%BF%87%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%82&lt;/p&gt;%0A&lt;/blockquote&gt;%0A%0A&lt;ol&gt;%0A&lt;li&gt;%E4%BF%AE%E6%94%B9php.ini%20&lt;/li&gt;%0A&lt;/ol&gt;%0A%0A&lt;h2&gt;%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%A6%82%E7%8E%87&lt;/h2&gt;%0A%0A&lt;ol&gt;%0A&lt;li&gt;&lt;p&gt;%E6%A0%B9%E6%8D%AE%E7%BD%91%E7%AB%99%E7%9A%84%E8%A7%84%E6%A8%A1(%201%E5%8D%83%E4%B8%87%E7%94%A8%E6%88%B7%20)%EF%BC%8C%E6%AF%94%E8%BE%83%E4%BD%8E%E5%B0%B1%E6%AF%94%E8%BE%83%E5%A5%BD%E3%80%82%20%E8%BF%99%E4%B8%AA%E6%A6%82%E5%BF%B5%E6%98%AF%E8%A6%81%E9%80%9A%E8%BF%87%E6%B5%8B%E8%AF%95%E5%87%BA%E6%9D%A5%E3%80%82&lt;/p&gt;&lt;/li&gt;%0A&lt;li&gt;&lt;p&gt;%E7%BD%91%E7%AB%99%E7%9A%84%E8%A7%84%E6%A8%A1%E5%B0%8F%EF%BC%8C%E6%B2%A1%E6%9C%89%E5%85%B3%E7%B3%BB%E3%80%82&lt;/p&gt;&lt;/li&gt;%0A&lt;/ol&gt;%0A%0A&lt;h3&gt;%E9%A1%B9%E7%9B%AE&lt;/h3&gt;%0A%0A&lt;blockquote&gt;%0A&lt;p&gt;%E5%95%86%E5%9F%8E%E3%80%82%0A%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E3%80%82&lt;/p&gt;%0A&lt;/blockquote&gt;%0A%0A&lt;p&gt;%E5%A6%82%E6%9E%9C%E6%83%B3%E8%A6%81%E5%81%9A%E5%88%B0%E5%A5%BD%E9%9C%80%E8%A6%81%E7%94%A8%E5%88%B0%E5%A5%BD%E6%8A%80%E6%9C%AF%EF%BC%9A%0A1.%20%E7%BC%93%E5%AD%98%E3%80%82%20%20%20%E5%89%8D%E5%8F%B0%E5%95%86%E5%93%81%E6%A8%A1%E5%9D%97%E3%80%81%E9%A6%96%E9%A1%B5%E6%A8%A1%E5%9D%97%20%0A2.%20%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C%E3%80%82%E4%B8%80%E5%AE%9A%E8%A6%81%E4%BD%BF%E7%94%A8%E5%AF%86%E7%A0%81%E5%8A%A0%E7%9B%90%E6%8A%80%E6%9C%AF%E3%80%82%0A3.%20Ajax%E3%80%82%20%20%20%E9%A6%96%E9%A1%B5%E6%A8%A1%E5%9D%97%E9%80%89%E9%A1%B9%E5%8D%A1(%E9%BC%A0%E6%A0%87%E7%A7%BB%E5%8A%A8%E4%B8%8A%E5%8E%BB%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E6%89%8D%E5%8A%A0%E8%BD%BD%E5%95%86%E5%93%81%E3%80%82%E5%85%B7%E4%BD%93%E5%8F%82%E8%80%83%E4%BA%AC%E4%B8%9C)%E3%80%82%E5%95%86%E5%93%81%E5%8A%A0%E8%BD%BD%EF%BC%88%E6%BB%9A%E5%8A%A8%E6%9D%A1%E6%BB%9A%E5%88%B0%E4%B8%80%E5%AE%9A%E9%AB%98%E5%BA%A6%E6%89%8D%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE%EF%BC%89&lt;/p&gt;%0A%0A&lt;p&gt;4.%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2%EF%BC%88%20sphinx%20%EF%BC%8C%E7%89%B9%E7%BA%A7%E8%AF%BE%E5%86%8D%E4%BC%98%E5%8C%96%20%EF%BC%8C%E6%9A%82%E6%97%B6%E4%B8%8D%E5%81%9A%E3%80%82%EF%BC%89&lt;/p&gt;%0A%0A&lt;ol&gt;%0A&lt;li&gt;&lt;p&gt;SQL%E8%A6%81%E6%B3%A8%E6%84%8F%E4%BC%98%E5%8C%96(%20%E5%89%8D%E5%8F%B0%20)%E3%80%82%0Aa.%20field('id,name')%20%0Ab.%20%E5%90%88%E7%90%86%E4%BD%BF%E7%94%A8%E7%B4%A2%E5%BC%95%20%20%E3%80%82%E7%BB%99%E7%BB%8F%E5%B8%B8%E5%9C%A8where%E5%90%8E%E9%9D%A2%E7%9A%84%E5%AD%97%E6%AE%B5%E6%B7%BB%E5%8A%A0%E7%B4%A2%E5%BC%95&lt;br&gt;%0A%20%20%20%20select%20id,name%20form%20user%20where%20name%20=%20'mary';&lt;/p&gt;%0A%0A&lt;pre&gt;&lt;code&gt;%E4%B8%80%E4%B8%AA%E8%A1%A8%E5%88%9B%E5%BB%BA%E5%90%8E%EF%BC%8C%E7%BB%99%E8%A1%A8%E5%AD%97%E6%AE%B5%E6%B7%BB%E5%8A%A0%E7%B4%A2%E5%BC%95%EF%BC%9A%0A%20%20%20%20ALTER%20%20TABLE%20%20user%20%20ADD%20%20INDEX%20%20in_name%20(%20name%20)%20;%20%0A&lt;/code&gt;&lt;/pre&gt;%0A%0A&lt;p&gt;c.%20%E5%87%8F%E5%B0%91%E5%A4%9A%E8%A1%A8%E8%81%94%E6%9F%A5%E3%80%82%E5%AF%B9%E7%AD%96%EF%BC%9A%E5%85%88%E6%9F%A5%E4%B8%80%E4%B8%AA%E8%A1%A8%EF%BC%8C%E5%86%8D%E6%A0%B9%E6%8D%AE%E8%BF%99%E4%B8%AA%E8%A1%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E6%9F%A5%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E8%A1%A8&lt;/p&gt;%0A%0A&lt;p&gt;d.%20%E5%B0%BD%E9%87%8F%E5%87%8F%E5%B0%91%E5%9C%A8SQL%E9%87%8C%E9%9D%A2%E8%BF%9B%E8%A1%8C%E8%BF%90%E7%AE%97%E3%80%82%E8%BF%98%E6%9C%89%E5%87%8F%E5%B0%91%E4%BD%BF%E7%94%A8mysql%E7%B3%BB%E7%BB%9F%E5%87%BD%E6%95%B0%E3%80%82.&lt;/p&gt;&lt;/li&gt;%0A&lt;li&gt;&lt;p&gt;!!%20%E4%B8%93%E9%97%A8%E4%B8%80%E4%B8%AA%E4%BA%BA(%20DBA%20%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%20)%E7%AE%A1%E7%90%86%E6%95%B0%E6%8D%AE%E5%BA%93%20%EF%BC%81%EF%BC%81%0A%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BF%AE%E6%94%B9%E4%BA%86%EF%BC%8C%E8%A6%81%E9%80%9A%E7%9F%A5%E6%89%80%E6%9C%89%E4%BA%BA%E3%80%82&lt;/p&gt;&lt;/li&gt;%0A&lt;li&gt;&lt;p&gt;%E7%99%BB%E5%BD%95%E3%80%81%E6%B3%A8%E5%86%8C%E9%A1%B5%E9%9D%A2%E4%BD%BF%E7%94%A8bootstrap%E5%86%99%E3%80%82&lt;/p&gt;&lt;/li&gt;%0A&lt;li&gt;&lt;p&gt;%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96%E7%9A%84%E5%BB%BA%E8%AE%AE%0Aa%E3%80%81JS%E6%94%BE%E5%88%B0HTML%E6%9C%80%E5%90%8E&lt;/p&gt;&lt;/li&gt;%0A&lt;li&gt;&lt;p&gt;%E4%BD%BF%E7%94%A8%E4%B8%80%E4%BA%9B%E7%AC%AC%E4%B8%89%E6%96%B9%E7%9A%84%E6%8F%92%E4%BB%B6%E3%80%82%0Aa.%20%E4%B8%8A%E4%BC%A0%E6%8F%92%E4%BB%B6%E3%80%82dropzone.js&lt;br&gt;%0Ab.%20%E5%95%86%E5%93%81%E8%AF%A6%E6%83%85%E3%80%82%E4%BD%BF%E7%94%A8ueditor&lt;/p&gt;&lt;/li&gt;%0A&lt;li&gt;&lt;p&gt;%E5%90%8E%E5%8F%B0%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1%E6%A8%A1%E5%9D%97%E3%80%82%E7%BB%9F%E8%AE%A1%E5%A6%82%E6%9E%9C%E6%83%B3%E8%A6%81%E5%A5%BD%E7%9C%8B%EF%BC%8C%E6%89%BEJS%E6%8F%92%E4%BB%B6%E3%80%82&lt;/p&gt;&lt;/li&gt;%0A&lt;/ol&gt;%0A%0A&lt;p&gt;%E5%88%A9%E7%94%A8%E9%82%A3%E4%B8%AA%E6%8F%92%E4%BB%B6%EF%BC%8C%E5%81%9A%E4%B8%80%E4%B8%AA%E5%95%86%E5%93%81%E7%9A%84%E6%B7%BB%E5%8A%A0%E6%A8%A1%E5%9D%97%EF%BC%81%EF%BC%81&lt;/p&gt;"></a></p>
-      </section>
-      <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-      </footer>
+        </section>
+
+        <footer>
+          廖海天的博客 - Github.io is maintained by <a href="https://github.com/liaohaitian">liaohaitian</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
   </body>
 </html>
